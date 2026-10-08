@@ -211,7 +211,7 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [11 hours]
+**Total time spent on assignment**: 14 hours
 
 **Most challenging part**: Feature 3 was the most challenging because I had to understand how waiting time changes when processes return to the ready queue
 
@@ -237,7 +237,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer hereI discovered that a program can have several threads operating separately. I discovered how to define a job using Runnable and how to start a thread using Thread.start(). Additionally, I discovered that Thread.sleep() can temporarily mimic a process that uses the CPU. One thread can wait for another to finish by using Thread.join(). By seeing multithreading in action in real code, this assignment improved my understanding of it..]
+[Write your answer hereI discovered that a program can have several threads operating separately. I discovered how to define a job using Runnable and how to start a thread using Thread.start(). Additionally, I discovered that Thread.sleep() can temporarily mimic a process that uses the CPU. One thread can wait for another to finish by using Thread.join(). By seeing multithreading in action in real code, this assignment improved my understanding of it.]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -345,7 +345,7 @@ This shows that P6 returned to the ready queue twice before using its remaining 
 
 1. **New**: [P1 is in the New state when the thread is created with new Thread(process) inside addProcessToQueue() but before start() is called.]
 
-2. **Runnable**: [P1 is in the New state when the thread is created with new Thread(process) inside addProcessToQueue() but before start() is called.]
+2. **Runnable**: [P1 is running when its run() method executes and Thread.sleep() is used to simulate its CPU time.]
 
 3. **Running**: [P1 is Running when its run() method is executing and the output shows P1 executing quantum [5000ms].]
 
