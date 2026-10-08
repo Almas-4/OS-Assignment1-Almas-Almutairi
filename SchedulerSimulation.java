@@ -261,7 +261,7 @@ public class SchedulerSimulation {
             for (Thread thread : processQueue) {
                 Process queueprocess = processMap.get(thread);
                 if (queueCount > 0) System.out.print(Colors.WHITE + " → " + Colors.RESET);
-                System.out.print(Colors.BRIGHT_CYAN + process.getName() + Colors.RESET);
+                System.out.print(Colors.BRIGHT_CYAN + queueprocess.getName() + Colors.RESET);
                 queueCount++;
             }
             if (queueCount == 0) {
