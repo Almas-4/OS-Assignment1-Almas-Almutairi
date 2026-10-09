@@ -237,7 +237,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer hereI discovered that a program can have several threads operating separately. I discovered how to define a job using Runnable and how to start a thread using Thread.start(). Additionally, I discovered that Thread.sleep() can temporarily mimic a process that uses the CPU. One thread can wait for another to finish by using Thread.join(). By seeing multithreading in action in real code, this assignment improved my understanding of it.]
+Write your answer hereI discovered that a program can have several threads operating separately. I discovered how to define a job using Runnable and how to start a thread using Thread.start(). Additionally, I discovered that Thread.sleep() can temporarily mimic a process that uses the CPU. One thread can wait for another to finish by using Thread.join(). By seeing multithreading in action in real code, this assignment improved my understanding of it.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -245,7 +245,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Feature 3 and figuring out the waiting time were the hardest parts. Because processes can use their time quantum and then return to the ready queue, it proved challenging. I had to comprehend the transition between waiting and running. I also have to comprehend the relationship between the process and its thread. I was able to comprehend the issue by carefully testing the scheduler.]
+Feature 3 and figuring out the waiting time were the hardest parts. Because processes can use their time quantum and then return to the ready queue, it proved challenging. I had to comprehend the transition between waiting and running. I also have to comprehend the relationship between the process and its thread. I was able to comprehend the issue by carefully testing the scheduler.
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -253,7 +253,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[In order to comprehend the requirements, I first looked over the README and the current code. I tracked each process's progress by following the scheduler step-by-step. After making a few minor adjustments, I tried the application. When I discovered an issue, I looked at the program's output and code to determine what was causing it. I was able to resolve the problems and gain a better understanding of the implementation thanks to this.]
+In order to comprehend the requirements, I first looked over the README and the current code. I tracked each process's progress by following the scheduler step-by-step. After making a few minor adjustments, I tried the application. When I discovered an issue, I looked at the program's output and code to determine what was causing it. I was able to resolve the problems and gain a better understanding of the implementation thanks to this.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +261,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[When an application must manage several tasks concurrently, multithreading is helpful. A web browser, for instance, can employ threads to load pages while still interacting with the user. A thread can be used by a music player to play music while the user utilises other functions. Threads can also be used in games for things like user input and game logic. These illustrations made it easier for me to understand how the threading ideas covered in this assignment can be applied in practical settings.]
+When an application must manage several tasks concurrently, multithreading is helpful. A web browser, for instance, can employ threads to load pages while still interacting with the user. A thread can be used by a music player to play music while the user utilises other functions. Threads can also be used in games for things like user input and game logic. These illustrations made it easier for me to understand how the threading ideas covered in this assignment can be applied in practical settings.
 
 ### Optional: What would you like to learn more about?
 
@@ -293,7 +293,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[While threads are tiny execution units that share a process's memory, processes are separate programs with their own memory. While threads are quicker and easier to communicate with, processes often have more creation and communication overhead. This assignment uses a real Java thread to run the Process class, which is only a simulated process. The Java thread that executes the simulated process is created by the line new Thread(process) in addProcessToQueue().]
+While threads are tiny execution units that share a process's memory, processes are separate programs with their own memory. While threads are quicker and easier to communicate with, processes often have more creation and communication overhead. This assignment uses a real Java thread to run the Process class, which is only a simulated process. The Java thread that executes the simulated process is created by the line new Thread(process) in addProcessToQueue().
 
 ## Question 2: Ready Queue Behavior
 
@@ -305,7 +305,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[When a process does not finish within its time quantum, it is placed back into the ready queue to wait for another turn. In my output, P6 has a burst time of 11850ms and the time quantum is 5000ms, so P6 was re-queued 2 times before it finished. The first 5000ms left 6850ms, and the second 5000ms left 1850ms. P6 then used its final 1850ms and finished execution. This behavior is important because re-queuing gives other processes a chance to use the CPU and makes the Round-Robin scheduler fair.]
+When a process does not finish within its time quantum, it is placed back into the ready queue to wait for another turn. In my output, P6 has a burst time of 11850ms and the time quantum is 5000ms, so P6 was re-queued 2 times before it finished. The first 5000ms left 6850ms, and the second 5000ms left 1850ms. P6 then used its final 1850ms and finished execution. This behavior is important because re-queuing gives other processes a chance to use the CPU and makes the Round-Robin scheduler fair.
 
 Example from my output:
 ```
@@ -333,7 +333,7 @@ This shows that P6 returned to the ready queue twice before using its remaining 
 ```
 
 **Explanation of example:**
-[P6 uses its 5000 ms time quantum first, but it doesn't finish because there are still 6850 ms left. After that, it is put back in the ready queue so that the CPU can be used by other programs. P6 gets re-queued after using an additional 5000 ms on its second turn and having 1850 ms left. P6 completes execution after running for the final 1850 milliseconds. This demonstrates how each process is given an equal chance by the Round-Robin scheduler.]
+P6 uses its 5000 ms time quantum first, but it doesn't finish because there are still 6850 ms left. After that, it is put back in the ready queue so that the CPU can be used by other programs. P6 gets re-queued after using an additional 5000 ms on its second turn and having 1850 ms left. P6 completes execution after running for the final 1850 milliseconds. This demonstrates how each process is given an equal chance by the Round-Robin scheduler.
 
 ## Question 3: Thread Lifecycle
 
@@ -343,15 +343,15 @@ This shows that P6 returned to the ready queue twice before using its remaining 
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [P1 is in the New state when the thread is created with new Thread(process) inside addProcessToQueue() but before start() is called.]
+1. **New**: P1 is in the New state when the thread is created with new Thread(process) inside addProcessToQueue() but before start() is called.
 
-2. **Runnable**: [P1 is running when its run() method executes and Thread.sleep() is used to simulate its CPU time.]
+2. **Runnable**: P1 becomes Runnable when the scheduler calls currentThread.start(). It is then eligible to be scheduled by the Java thread scheduler.
 
-3. **Running**: [P1 is Running when its run() method is executing and the output shows P1 executing quantum [5000ms].]
+3. **Running**: P1 is Running when its thread is executing the run() method and processing its time quantum.
 
-4. **Waiting**: [Thread in P1 goes into TIMED_WAITING.While the main thread can enter WAITING when it calls Thread, sleep() is called to mimic CPU execution.join() to await P1's completion]
+4. **Waiting**: P1 enters the Timed Waiting state when Thread.sleep() is called to simulate execution time. The main thread enters the Waiting state when it calls currentThread.join() to wait for P1 to finish.
 
-5. **Terminated**: [When P1's run() method completes, it enters the Terminated state, as indicated by P1 ended execution!.]
+5. **Terminated**: P1's thread reaches the Terminated state after its run() method finishes executing.
 
 ## Question 4: Real-World Applications
 
@@ -361,21 +361,21 @@ This shows that P6 returned to the ready queue twice before using its remaining 
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [CPU Scheduling in an Operating System]
+### Example 1 (operating-system level): CPU Scheduling in an Operating System
 
 **Description**:
-[Round-Robin scheduling allows an operating system to distribute CPU time among several active programs. In the simulation, every running application functions as a process, and the time quantum allots a finite amount of CPU time to each process. The OS switches context and transfers the CPU to the next process that is ready when the quantum expires]
+Round-Robin scheduling allows an operating system to distribute CPU time among several active programs. In the simulation, every running application functions as a process, and the time quantum allots a finite amount of CPU time to each process. The OS switches context and transfers the CPU to the next process that is ready when the quantum expires
 
 **Why Round-Robin works well here**:
-[Rather of having one process use the CPU continually, Round-Robin ensures fairness by giving each ready process a turn. Because programs don't have to wait as long to receive CPU time, it also enhances responsiveness. Processes like P6 are re-added to the ready queue after utilising their 5000ms quantum in my simulation, which is comparable to this.]
+Rather of having one process use the CPU continually, Round-Robin ensures fairness by giving each ready process a turn. Because programs don't have to wait as long to receive CPU time, it also enhances responsiveness. Processes like P6 are re-added to the ready queue after utilising their 5000ms quantum in my simulation, which is comparable to this.
 
 ### Example 2: [Web Server Handling Multiple Requests]
 
 **Description**:
-[Several threads can be used by a web server to simultaneously process requests from several users. A time quantum restricts how long a task can utilise the CPU before another task has a turn, and each request can be regarded as a task. The server can transition between jobs thanks to a context switch.]
+Several threads can be used by a web server to simultaneously process requests from several users. A time quantum restricts how long a task can utilise the CPU before another task has a turn, and each request can be regarded as a task. The server can transition between jobs thanks to a context switch.
 
 **Why Round-Robin works well here**:
-[Round-Robin can avoid all other requests from being delayed by a single, lengthy task and offer equitable CPU access. Because every request is given the opportunity to be processed on a regular basis, it also increases responsiveness. Because incomplete tasks are put back in the ready queue and given another turn later, this is comparable to the simulation.]
+Round-Robin can avoid all other requests from being delayed by a single, lengthy task and offer equitable CPU access. Because every request is given the opportunity to be processed on a regular basis, it also increases responsiveness. Because incomplete tasks are put back in the ready queue and given another turn later, this is comparable to the simulation.
 
 ## Summary
 
