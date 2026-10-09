@@ -211,13 +211,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: 14 hours
+**Total time spent on assignment**: 13.5 hours
 
 **Most challenging part**: Feature 3 was the most challenging because I had to understand how waiting time changes when processes return to the ready queue
 
 **Most interesting learning**:I found it interesting to see how Java threads can be used to simulate processes and how Round-Robin scheduling manages them.
 
-**What I would do differently next time**:I would begin testing every feature sooner and continue to
+**What I would do differently next time**:I would begin testing every feature sooner and continue to test the code after each change to find and fix errors early.
 
 ---
 
@@ -237,7 +237,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-Write your answer hereI discovered that a program can have several threads operating separately. I discovered how to define a job using Runnable and how to start a thread using Thread.start(). Additionally, I discovered that Thread.sleep() can temporarily mimic a process that uses the CPU. One thread can wait for another to finish by using Thread.join(). By seeing multithreading in action in real code, this assignment improved my understanding of it.
+I discovered that a program can have several threads operating separately. I discovered how to define a job using Runnable and how to start a thread using Thread.start(). Additionally, I discovered that Thread.sleep() can temporarily mimic a process that uses the CPU. One thread can wait for another to finish by using Thread.join(). By seeing multithreading in action in real code, this assignment improved my understanding of it.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -351,7 +351,7 @@ P6 uses its 5000 ms time quantum first, but it doesn't finish because there are 
 
 4. **Waiting**: P1 enters the Timed Waiting state when Thread.sleep() is called to simulate execution time. The main thread enters the Waiting state when it calls currentThread.join() to wait for P1 to finish.
 
-5. **Terminated**: P1's thread reaches the Terminated state after its run() method finishes executing.
+5. **Terminated**: P1's thread reaches the Terminated state after its run() method finished execution!.
 
 ## Question 4: Real-World Applications
 
@@ -369,7 +369,7 @@ Round-Robin scheduling allows an operating system to distribute CPU time among s
 **Why Round-Robin works well here**:
 Rather of having one process use the CPU continually, Round-Robin ensures fairness by giving each ready process a turn. Because programs don't have to wait as long to receive CPU time, it also enhances responsiveness. Processes like P6 are re-added to the ready queue after utilising their 5000ms quantum in my simulation, which is comparable to this.
 
-### Example 2: [Web Server Handling Multiple Requests]
+### Example 2: Web Server Handling Multiple Requests
 
 **Description**:
 Several threads can be used by a web server to simultaneously process requests from several users. A time quantum restricts how long a task can utilise the CPU before another task has a turn, and each request can be regarded as a task. The server can transition between jobs thanks to a context switch.
